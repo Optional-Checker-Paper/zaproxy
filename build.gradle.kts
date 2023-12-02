@@ -5,6 +5,7 @@ plugins {
     id("org.sonarqube") version "4.3.0.3225"
     id("com.github.ben-manes.versions") version "0.50.0"
     id("net.ltgt.errorprone") version "3.1.0"
+    id("com.github.spotbugs") version "5.2.5"
 }
 
 apply(from = "$rootDir/gradle/ci.gradle.kts")
@@ -12,6 +13,7 @@ apply(from = "$rootDir/gradle/ci.gradle.kts")
 allprojects {
     apply(plugin = "com.diffplug.spotless")
     apply(plugin = "net.ltgt.errorprone")
+    apply(plugin = "com.github.spotbugs")
 
     repositories {
         mavenCentral()
@@ -29,6 +31,17 @@ allprojects {
             ktlint()
         }
     }
+      dependencies {
+           spotbugs("com.github.spotbugs:spotbugs:4.7.1")
+      }
+spotbugs {
+      ignoreFailures.set(true)
+      toolVersion.set("4.8.2")
+      effort.set(com.github.spotbugs.snom.Effort.DEFAULT)
+      reportLevel.set(com.github.spotbugs.snom.Confidence.DEFAULT)
+      reportsDir.set(file("$buildDir/spotbugs"))
+  }
+
 
     project.plugins.withType(JavaPlugin::class) {
         dependencies {
@@ -58,3 +71,5 @@ sonarqube {
         property("sonar.exclusions", "**/*.gradle.kts")
     }
 }
+
+
