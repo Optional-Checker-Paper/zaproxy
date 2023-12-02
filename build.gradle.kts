@@ -41,6 +41,9 @@ allprojects {
         options.compilerArgs = listOf("-Xlint:all", "-Werror", "-parameters")
         options.errorprone {
             disableAllChecks.set(true)
+            enable("NullOptional", "NullableOptional",
+     "OptionalMapToOptional", "OptionalNotPresent", "OptionalEquality",
+     "OptionalMapUnusedValue", "OptionalOfRedundantMethod", "UnnecessaryOptionalGet")
             error(
                 "MissingOverride",
                 "WildcardImport",
