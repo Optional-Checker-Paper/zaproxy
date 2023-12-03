@@ -44,6 +44,12 @@ allprojects {
       checkers = listOf(
           "org.checkerframework.checker.optional.OptionalChecker",
       )
+       extraJavacArgs = listOf(
+         "-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno",
+         "-AassumePure",
+         "-AwarnUnneededSuppressions"
+     )
+     excludeTests = true
     }
 
     tasks.withType<JavaCompile>().configureEach {
