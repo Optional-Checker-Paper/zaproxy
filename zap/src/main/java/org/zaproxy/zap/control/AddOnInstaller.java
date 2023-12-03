@@ -635,6 +635,7 @@ public final class AddOnInstaller {
      * @return {@code true} if the libraries were uninstalled without errors, {@code false}
      *     otherwise.
      */
+    @SuppressWarnings("SimplifyOptionalCallChains") // intellij-suppression-simplify-optional-call-chains
     static boolean uninstallAddOnLibs(AddOn addOn) {
         List<AddOn.Lib> libs = addOn.getLibs();
         if (libs.isEmpty()) {

@@ -186,6 +186,7 @@ public class HttpSessionsParam extends AbstractParam {
      * @return {@code true} if the token did not exist, {@code false} otherwise.
      * @since 2.8.0
      */
+    @SuppressWarnings("SimplifyOptionalCallChains") // intellij-suppression-simplify-optional-call-chains
     public boolean addDefaultToken(String name, boolean enabled) {
         String normalisedName = getNormalisedSessionTokenName(name);
         if (!getDefaultToken(normalisedName).isPresent()) {
