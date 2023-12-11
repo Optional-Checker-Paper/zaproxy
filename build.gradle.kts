@@ -48,6 +48,7 @@ allprojects {
 	  "-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno",
 	  "-AassumePure",
 	  "-AwarnUnneededSuppressions",
+	  "-AassumeAssertionsAreEnabled"
      )
      excludeTests = true
     }
