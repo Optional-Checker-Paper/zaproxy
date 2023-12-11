@@ -572,7 +572,6 @@ public class ContextAPI extends ApiImplementor {
      * @return the matching tech
      * @throws ApiException the api exception
      */
-    @SuppressWarnings("optional:introduce.eliminate") // introduce-eliminate
     private Tech getTech(String techName) throws ApiException {
         return Optional.ofNullable(Tech.get(techName))
                 .orElseThrow(
