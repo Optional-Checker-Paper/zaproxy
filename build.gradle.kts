@@ -53,15 +53,7 @@ allprojects {
             "-Astubs=${project.projectDir}/reportoptional.astub",
         )
         excludeTests = true
-        val checkerFrameworkVersion = "3.41.1-SNAPSHOT"
-        dependencies {
-            compileOnly("org.checkerframework:checker-qual:${checkerFrameworkVersion}")
-            testCompileOnly("org.checkerframework:checker-qual:${checkerFrameworkVersion}")
-            checkerFramework("org.checkerframework:checker:${checkerFrameworkVersion}")
-        }
-        configurations.all({
-            resolutionStrategy.cacheChangingModulesFor(0, "seconds")
-        })
+	# Do not use a snapshot version.  I can't get it to work in this project.
     }
 
     tasks.withType<JavaCompile>().configureEach {
