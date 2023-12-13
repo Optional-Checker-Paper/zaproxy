@@ -50,15 +50,16 @@ allprojects {
             "-AassumePure",
             "-AwarnUnneededSuppressions",
             "-AassumeAssertionsAreEnabled",
-            "-Astubs=${project.projectDir}/reportoptional.astub",
+            "-AReportChecker_warns",
+            "-Astubs=${project.projectDir}/reportoptional.astub"
         )
         excludeTests = true
-	# Do not use a snapshot version.  I can't get it to work in this project.
+	// Do not use a snapshot version.  I can't get it to work in this project.
     }
 
     tasks.withType<JavaCompile>().configureEach {
         options.encoding = "utf-8"
-        options.compilerArgs = mutableListOf("-Xlint:all", "-parameters", "-Xmaxerrs", "99999")
+        options.compilerArgs = mutableListOf("-Xlint:all", "-parameters", "-Xmaxerrs", "99999", "-Xmaxwarns", "99999")
         options.errorprone {
             disableAllChecks.set(true)
             error(
