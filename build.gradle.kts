@@ -41,18 +41,18 @@ allprojects {
     }
 
     configure<CheckerFrameworkExtension> {
-      checkers = mutableListOf(
-          "org.checkerframework.checker.optional.OptionalChecker",
-          "org.checkerframework.common.util.count.report.ReportChecker"
-      )
-      extraJavacArgs = mutableListOf(
-	  "-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno",
-	  "-AassumePure",
-	  "-AwarnUnneededSuppressions",
-	  "-AassumeAssertionsAreEnabled",
-    "-Astubs=${project.projectDir}/reportoptional.astub"
-     )
-     excludeTests = true
+	checkers = mutableListOf(
+	    "org.checkerframework.checker.optional.OptionalChecker",
+	    "org.checkerframework.common.util.count.report.ReportChecker"
+	)
+	extraJavacArgs = mutableListOf(
+	    "-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno",
+	    "-AassumePure",
+	    "-AwarnUnneededSuppressions",
+	    "-AassumeAssertionsAreEnabled",
+            "-Astubs=${project.projectDir}/reportoptional.astub",
+        )
+        excludeTests = true
     }
 
     tasks.withType<JavaCompile>().configureEach {
