@@ -48,7 +48,7 @@ allprojects {
 	    "-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno",
 	    "-AassumePure",
 	    "-AwarnUnneededSuppressions",
-	    "-AassumeAssertionsAreEnabled"
+	    "-AassumeAssertionsAreEnabled",
         )
         excludeTests = true
 	# Do not use a snapshot version.  I can't get it to work in this project.
