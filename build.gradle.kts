@@ -43,19 +43,21 @@ allprojects {
     configure<CheckerFrameworkExtension> {
       checkers = mutableListOf(
           "org.checkerframework.checker.optional.OptionalChecker",
+          "org.checkerframework.common.util.report.ReportChecker"
       )
       extraJavacArgs = mutableListOf(
 	  "-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno",
 	  "-AassumePure",
 	  "-AwarnUnneededSuppressions",
-	  "-AassumeAssertionsAreEnabled"
+	  "-AassumeAssertionsAreEnabled",
+    "-Astubs=${project.projectDir}/reportoptional.astub"
      )
      excludeTests = true
     }
 
     tasks.withType<JavaCompile>().configureEach {
         options.encoding = "utf-8"
-        options.compilerArgs = mutableListOf("-Xlint:all", "-parameters")
+        options.compilerArgs = mutableListOf("-Xlint:all", "-parameters", "-Xmaxerrs", "99999")
         options.errorprone {
             disableAllChecks.set(true)
             error(
