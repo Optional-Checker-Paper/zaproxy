@@ -6,7 +6,8 @@ plugins {
     id("org.sonarqube") version "4.3.0.3225"
     id("com.github.ben-manes.versions") version "0.50.0"
     id("net.ltgt.errorprone") version "3.1.0"
-    id("org.checkerframework") version "0.6.35" apply false
+    // Using an updated version of the Checker Framework to enable Optional type counting.
+    id("org.checkerframework") version "0.6.37" apply false
 }
 
 apply(from = "$rootDir/gradle/ci.gradle.kts")
@@ -42,7 +43,6 @@ allprojects {
 
     configure<CheckerFrameworkExtension> {
         checkers = mutableListOf(
-            "org.checkerframework.checker.optional.OptionalChecker",
             "org.checkerframework.common.util.count.report.ReportChecker",
         )
         extraJavacArgs = mutableListOf(
@@ -54,7 +54,6 @@ allprojects {
             "-Astubs=${project.projectDir}/reportoptional.astub"
         )
         excludeTests = true
-	// Do not use a snapshot version.  I can't get it to work in this project.
     }
 
     tasks.withType<JavaCompile>().configureEach {

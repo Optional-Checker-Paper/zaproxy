@@ -1,0 +1,163 @@
+:buildSrc:generateExternalPluginSpecBuilders UP-TO-DATE
+:buildSrc:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+:buildSrc:compilePluginsBlocks UP-TO-DATE
+:buildSrc:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+:buildSrc:generateScriptPluginAdapters UP-TO-DATE
+:buildSrc:compileKotlin
+:buildSrc:pluginDescriptors UP-TO-DATE
+:buildSrc:processResources UP-TO-DATE
+:buildSrc:compileJava UP-TO-DATE
+:buildSrc:compileGroovy NO-SOURCE
+:buildSrc:classes UP-TO-DATE
+:buildSrc:jar UP-TO-DATE
+:buildSrc:inspectClassesForKotlinIC
+No explicit dependency on the Checker Framework found, using default version 3.42.0
+:zap:cyclonedxRuntimeBom
+:createCheckerFrameworkManifest
+:compileJava NO-SOURCE
+:processResources NO-SOURCE
+:classes UP-TO-DATE
+:jar
+:assemble
+Unknown keyword additionalItems - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword
+:zap:createCheckerFrameworkManifest
+:zap:compileJava
+warning: No processor claimed any of these annotations: /org.zaproxy.zap.extension.api.ZapApiIgnore
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOn.java:454: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+    public static Optional<AddOn> createAddOn(Path file) {
+                                  ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOn.java:454: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+    public static Optional<AddOn> createAddOn(Path file) {
+                                  ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOn.java:456: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+            return Optional.of(new AddOn(file));
+                              ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOn.java:456: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>of(T) [METHOD]
+            return Optional.of(new AddOn(file));
+                              ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOn.java:456: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>of(T) [METHOD]
+            return Optional.of(new AddOn(file));
+                           ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOn.java:454: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+    public static Optional<AddOn> createAddOn(Path file) {
+                                  ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOn.java:467: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+        return Optional.empty();
+                             ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOn.java:467: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>empty() [METHOD]
+        return Optional.empty();
+                             ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOn.java:467: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>empty() [METHOD]
+        return Optional.empty();
+                       ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/api/ApiImplementor.java:125: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.ifPresent(java.util.function.Consumer<? super T>) [METHOD]
+                .ifPresent(
+                          ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/api/ApiImplementor.java:125: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.ifPresent(java.util.function.Consumer<? super T>) [METHOD]
+                .ifPresent(
+                ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:191: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+        if (!getDefaultToken(normalisedName).isPresent()) {
+                                                      ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:191: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+        if (!getDefaultToken(normalisedName).isPresent()) {
+                                            ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:209: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+    private Optional<HttpSessionToken> getDefaultToken(String name) {
+                                       ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:209: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+    private Optional<HttpSessionToken> getDefaultToken(String name) {
+                                       ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:210: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+        return defaultTokens.stream().filter(e -> name.equalsIgnoreCase(e.getName())).findFirst();
+                                                                                               ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:222: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+        Optional<HttpSessionToken> maybeToken =
+                                   ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:223: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+                getDefaultToken(getNormalisedSessionTokenName(name));
+                               ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:224: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+        if (maybeToken.isPresent()) {
+                                ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:224: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+        if (maybeToken.isPresent()) {
+                      ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:225: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+            HttpSessionToken token = maybeToken.get();
+                                                   ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:225: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+            HttpSessionToken token = maybeToken.get();
+                                               ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:262: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+        Optional<HttpSessionToken> maybeToken = getDefaultToken(normalisedName);
+                                   ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:262: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+        Optional<HttpSessionToken> maybeToken = getDefaultToken(normalisedName);
+                                                               ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:263: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+        if (maybeToken.isPresent()) {
+                                ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:263: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+        if (maybeToken.isPresent()) {
+                      ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:264: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+            defaultTokens.remove(maybeToken.get());
+                                               ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/httpsessions/HttpSessionsParam.java:264: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+            defaultTokens.remove(maybeToken.get());
+                                           ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/parosproxy/paros/view/AbstractParamContainerPanel.java:584: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+        return panels.stream().filter(e -> name.equals(e.getName())).findFirst().orElse(null);
+                                                                                       ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/parosproxy/paros/view/AbstractParamContainerPanel.java:584: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+        return panels.stream().filter(e -> name.equals(e.getName())).findFirst().orElse(null);
+                                                                                ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/script/ScriptParam.java:163: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.ifPresent(java.util.function.Consumer<? super T>) [METHOD]
+                .ifPresent(config -> config.setProperty(SCRIPT_ENABLED_KEY, script.isEnabled()));
+                          ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/script/ScriptParam.java:163: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.ifPresent(java.util.function.Consumer<? super T>) [METHOD]
+                .ifPresent(config -> config.setProperty(SCRIPT_ENABLED_KEY, script.isEnabled()));
+                ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOnCollection.java:193: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.ifPresent(java.util.function.Consumer<? super T>) [METHOD]
+                        .ifPresent(
+                                  ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOnCollection.java:193: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.ifPresent(java.util.function.Consumer<? super T>) [METHOD]
+                        .ifPresent(
+                        ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/autoupdate/ExtensionAutoUpdate.java:654: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.ifPresent(java.util.function.Consumer<? super T>) [METHOD]
+                            .ifPresent(
+                                      ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/autoupdate/ExtensionAutoUpdate.java:654: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.ifPresent(java.util.function.Consumer<? super T>) [METHOD]
+                            .ifPresent(
+                            ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/api/ContextAPI.java:577: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<X>orElseThrow(java.util.function.Supplier<? extends X>) [METHOD]
+                .orElseThrow(
+                            ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/api/ContextAPI.java:577: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<X>orElseThrow(java.util.function.Supplier<? extends X>) [METHOD]
+                .orElseThrow(
+                ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/api/ContextAPI.java:576: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+        return Optional.ofNullable(Tech.get(techName))
+                                  ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/extension/api/ContextAPI.java:576: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+        return Optional.ofNullable(Tech.get(techName))
+                       ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOnInstaller.java:654: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+            if (!entries.findAny().isPresent()) {
+                                            ^
+/tmp/experiments/optional-paper-counts-repos/zaproxy/zap/src/main/java/org/zaproxy/zap/control/AddOnInstaller.java:654: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+            if (!entries.findAny().isPresent()) {
+                                  ^
+43 warnings
+:zap:processResources
+:zap:classes
+:zap:jar
+:zap:jarWithBom
+:zap:distFiles
+:zap:jarDaily
+:zap:distDaily
+:zap:assemble
+
+BUILD SUCCESSFUL in 1m 14s
+22 actionable tasks: 13 executed, 9 up-to-date
